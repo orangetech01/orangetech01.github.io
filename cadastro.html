@@ -12,6 +12,7 @@
 <body>
     <main>
         <div>
+            <h1>Cadastro</h1>
             <form action="cadastro.php" method="post" class="form-login">
                 <label for="login">
                     Nome*
@@ -27,23 +28,22 @@
                 </label>
                 <label for="password">
                     Senha*
-                    <input type="password" name="password" required placeholder="Digite a senha" id="password"
-                        title="A senha deve conter, ao menos uma letra minúscula e um maiuscula" />
+                    <input type="password" name="password" required placeholder="Digite a senha" id="Confinrma-password"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="A senha deve conter  um número , ao menos uma letra minúscula, uma letra maiúscula e 8 caracteres" />
                 </label>
 
                 <label for="password">
                     Confirme sua senha*
                     <input type="password" name="password" required placeholder="Confirme sua senha" id="password"
-                        title="A senha deve conter, ao menos uma letra minúscula" />
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="A senha deve conter  um número , ao menos uma letra minúscula, uma letra maiúscula e 8 caracteres" />
                 </label>
                 <button type="submit">Cadastrar</button>
-                <div class="forGet">
-                <p><a href="#">Esqueci a senha</a></p>
-                <p><a href="#">Ainda não sou cadastrado(a)</a></p>
-                </div>
         </div>
         </form>
     </main>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
